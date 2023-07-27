@@ -10,8 +10,8 @@ This project uses VueJS to create interactable Slot Machine which can be control
 You can control Slot Machine using commands written into the chat of your stream.
 
 Commands should use custom points system as a way to generate and manipulate points for Slot Machine. Here are two examples, that can be used:
-  - **VRFlad's points system - TESTED**  https://www.youtube.com/watch?v=VCnoT7wqNrE
-  - *TerrierDart's points system - NEEDS TESTING, may not work in current version* https://terrierdarts.pages.dev/en/ranking_system/core/
+  - **VRFlad's points system - TESTED** > https://www.youtube.com/watch?v=VCnoT7wqNrE
+  - *TerrierDart's points system - NEEDS TESTING, may not work in current version* > https://terrierdarts.pages.dev/en/ranking_system/core/
 
 
 
@@ -169,4 +169,4 @@ Video guide will be provided (soon, cough cough).
 
 ## Do you like what I do?
 
-No, I am not gonna sell-out. But I appreciate all the support of what I do at my twitch channel > https://www.twitch.tv/markusooooo (interactive stream with demon lord himself, every viewer that actually interacts, is very welcome).
+No, I am not gonna sell-out. But I appreciate all the support of what I do at my twitch channel > https://www.twitch.tv/markusooooo (interactive stream with demon lord himself.. every viewer, that actually interacts on stream, is very welcome).
