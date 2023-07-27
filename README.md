@@ -163,7 +163,7 @@ This project is by no means complete. It needs to be properly tested by other us
 
 TD's Points system might not work (I did not test it yet). I will implement it eventually (wink).
 
-Youtube chat commands were not tested. I should work (in theory). I will be glad for feedback on that.
+Youtube chat commands were not tested. They should work without any issues (in theory). I will be glad for feedback on that.
 
 Video guide will be provided (soon, cough cough).
 
