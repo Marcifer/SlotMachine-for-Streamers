@@ -31,6 +31,8 @@ Chat widget seen in the demo video was made by ***Blackywersonst*** (https://www
 
 Video instructions comming soon (I say that a lot). Here is a text version in the "meantime".
 
+
+
 ### Prerequisites
 
 -  OBS v29.1.3+ (https://obsproject.com/)
@@ -38,6 +40,8 @@ Video instructions comming soon (I say that a lot). Here is a text version in th
 -  Zip file provided in this repo
 -  Determination and plushie to squeeze on successful implementation f.e. (https://www.kidrobot.com/products/marvel-deadpool-riding-unicorn-plush?variant=32772198269025)
 -  (Points system) is **NOT REQUIRED** but **HIGHLY recommended** (see top of this guide for my choices, or you can code your own Points system.. this project **WILL WORK** even without any Points system)
+
+
 
 ### Text Guide
 
@@ -89,6 +93,8 @@ Video instructions comming soon (I say that a lot). Here is a text version in th
 
 **And you are done seting everything up!**
 
+
+
 ### Testing and explanation of commands
    
 It is time for *testing*, so let's go over the commands and how they work (**make sure, your SlotMachine source is hidden before testing!**). Try typing following commands into twitch/youtube chat:
@@ -111,6 +117,8 @@ It is time for *testing*, so let's go over the commands and how they work (**mak
 
 And here we are! Did all of the commands work as expected? Well, you just finished the setup! Well done! Get some ice cream, squeeze your plushie! **YOU** did it!
 
+
+
 ### What can go wrong?
 
 Here is list of possible issues that you could encounter:
@@ -121,6 +129,8 @@ Here is list of possible issues that you could encounter:
    **Remember to disable that Set user specific subaction when you do not need it anymore for testing and have Points System in place!**
 -  !slots command does not output anything into the chat. Well, you probably forgot to enable the command descibed in step 4 of text guide, or something is crashing. Look into your log in SB and try to point out the issue or send it either to SB discord or try contacting me via DM with your log.
 -  Something else is not working? Refer to Find a bug? part bellow or if very desperate, my DMs on discord are always open.
+
+
 
 
 ## Can I tweak visuals/function to my own needs?
@@ -138,9 +148,13 @@ Select `Sub-Action` inside this group, called `Set argument %pointsname%`, right
 **Remember to disable that Set argument subaction when you do not need it anymore for testing and have Points System in place!**
 
 
+
+
 ## Found a bug?
 
 If you found an issue or would like to submit an improvement to this project, please do so using the issue tab above. If you would like to submit a PR with a fix, reference the issue itself in it!
+
+
 
 
 ## Known issues (Work in progress)
@@ -149,6 +163,8 @@ This project is by no means complete. It needs to be properly tested by other us
 TD's Points system might not work (I did not test it yet). I will implement it eventually (wink).
 Youtube chat commands were not tested. I should work (in theory). I will be glad for feedback on that.
 Video guide will be provided (soon, cough cough).
+
+
 
 
 ## Do you like what I do?
