@@ -160,8 +160,11 @@ If you found an issue or would like to submit an improvement to this project, pl
 ## Known issues (Work in progress)
 
 This project is by no means complete. It needs to be properly tested by other users than myself, to make sure everything is working as expected.
+
 TD's Points system might not work (I did not test it yet). I will implement it eventually (wink).
+
 Youtube chat commands were not tested. I should work (in theory). I will be glad for feedback on that.
+
 Video guide will be provided (soon, cough cough).
 
 
