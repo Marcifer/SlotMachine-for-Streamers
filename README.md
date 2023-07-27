@@ -19,6 +19,7 @@ Commands should use custom points system as a way to generate and manipulate poi
 [![EXAMPLE VIDEO OF SLOT MACHINE](https://i.ytimg.com/vi_webp/vyXUFI1ySIw/maxresdefault.webp)](https://www.youtube.com/watch?v=vyXUFI1ySIw "Slot Machine Demo")
 
 Overlay on top of the browser source seen in this example was drawn by my lovely wife <3 ***FoxyThePurpleWitch*** <3 (https://www.twitch.tv/foxythepurplewitch).
+
 Chat widget seen in the demo video was made by ***Blackywersonst*** (https://www.twitch.tv/blackywersonst).
 
 
