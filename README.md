@@ -4,7 +4,7 @@
 ## A fully customizable Slot Machine, which can be controlled with Streamer.bot
 
 Original Pen created on CodePen.io. Original URL: (https://codepen.io/rattatat/pen/mXqJEq).
-Pen tweaked and modified by ***MarkusoOoO*** (https://www.twitch.tv/markusooooo) to work with Streamer.bot (https://streamer.bot/).
+Pen tweaked and modified by ***MarkusoOoO*** (https://www.twitch.tv/markusoooo) to work with Streamer.bot (https://streamer.bot/).
 
 This project uses VueJS to create interactable Slot Machine which can be controled using websocket server that communicates with Streamer.bot (*I will use shortcut SB from now on in this document*), to enhance control of the Slot Machine.
 You can control Slot Machine using commands written into the chat of your stream.
@@ -172,4 +172,4 @@ Video guide will be provided (soon, cough cough).
 
 ## Do you like what I do?
 
-No, I am not gonna sell-out. But I appreciate all the support of what I do at my twitch channel > https://www.twitch.tv/markusooooo (interactive stream with demon lord himself.. every viewer, that actually interacts on stream, is very welcome).
+No, I am not gonna sell-out. But I appreciate all the support of what I do at my twitch channel > https://www.twitch.tv/markusoooo (interactive stream with demon lord himself.. every viewer, that actually interacts on stream, is very welcome).
