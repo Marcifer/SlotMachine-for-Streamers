@@ -126,6 +126,7 @@ Here is list of possible issues that you could encounter:
    However, if you just want to make sure everything works and test the Slot Machine, you can, as a temporary workaround, set fix value of points to whoever calls the `!slots` command and triggers `SlotsMachine Redeem` action.
    I prepared required `Sub-Action` for this in `Action` called `SlotMachine redeem` in group called `Static points value and name group for testing without Points System`. Select `Sub-Action` inside this group, called `Set user specific (redeemer)`, right click it > `Enabled`. You can also double click it and change `Value` of 666 I put in there.
    Now you can test !slots and other commands. But you will always set user to have always the same ammount of points we just defined and it resets on each start of new game. So please, either use one of already made Points Systems or code your own.
+   
    **Remember to disable that Set user specific subaction when you do not need it anymore for testing and have Points System in place!**
 -  !slots command does not output anything into the chat. Well, you probably forgot to enable the command descibed in step 4 of text guide, or something is crashing. Look into your log in SB and try to point out the issue or send it either to SB discord or try contacting me via DM with your log.
 -  Something else is not working? Refer to Find a bug? part bellow or if very desperate, my DMs on discord are always open.
@@ -145,6 +146,7 @@ If you want to change colors, positioning, fonts, font size, etc... use `style.c
 
 You want to change currency name? Use **Points System** for that. Or you can **just for testing** use pre-made `Sub-Action` in `Action` called `SlotMachine redeem` in group called `Static points value and name group for testing without Points System`. 
 Select `Sub-Action` inside this group, called `Set argument %pointsname%`, right click it > `Enabled`. You can also double click it and change `Value` of "chimi" I put in there.
+
 **Remember to disable that Set argument subaction when you do not need it anymore for testing and have Points System in place!**
 
 
