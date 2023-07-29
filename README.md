@@ -29,7 +29,7 @@ Chat widget seen in the demo video was made by ***Blackywersonst*** (https://www
 
 # Guide to make this work for you
 
-Video instructions comming soon (I say that a lot). Here is a text version in the "meantime".
+Video instructions coming soon (I say that a lot). Here is a text version in the "meantime".
 
 
 
