@@ -27,13 +27,13 @@ Chat widget seen in the demo video was made by ***Blackywersonst*** (https://www
 
 
 
-## Guide to make this work on YOUR stream
+# Guide to make this work on YOUR stream
 
 Video instructions comming soon (I say that a lot). Here is a text version in the "meantime".
 
 
 
-### Prerequisites
+## Prerequisites
 
 -  OBS v29.1.3+ (https://obsproject.com/)
 -  Streamer.bot (SB) v0.1.22+ (https://streamer.bot/)
@@ -43,7 +43,7 @@ Video instructions comming soon (I say that a lot). Here is a text version in th
 
 
 
-### Text Guide
+## Text Guide
 
 1. This guide assumes, that OBS and SB are installed, SB is connected to Twitch and/or Youtube and to the OBS itself (you can find a tutorial on how to do this on Youtube, here is one example by Nutty > https://www.youtube.com/watch?v=CcXAs-qZ0Ys).
 
@@ -98,7 +98,7 @@ Video instructions comming soon (I say that a lot). Here is a text version in th
 
 
 
-### Testing and explanation of commands
+## Testing and explanation of commands
    
 It is time for *testing*, so let's go over the commands and how they work (**make sure, your SlotMachine source is hidden before testing!**). Try typing following commands into twitch/youtube chat:
 
@@ -135,7 +135,7 @@ And here we are! Did all of the commands work as expected? Well, you just finish
 
 
 
-### What can go wrong?
+## What can go wrong?
 
 Here is list of possible issues that you could encounter:
 -  !slots command outputs that I have only 0 points. Well, you either should get some points first, or, you are not using any Points System. Please refer to top of this guide, where you can choose either VRFlad's Point System or TD's point system.
@@ -155,7 +155,7 @@ Here is list of possible issues that you could encounter:
 
 
 
-## Can I tweak visuals/function to my own needs?
+# Can I tweak visuals/function to my own needs?
 
 Yes! This project is fully customizable! 
 
@@ -173,14 +173,14 @@ Select `Sub-Action` inside this group, called `Set argument %pointsname%`, right
 
 
 
-## Found a bug?
+# Found a bug?
 
 If you found an issue or would like to submit an improvement to this project, please do so using the issue tab above. If you would like to submit a PR with a fix, reference the issue itself in it!
 
 
 
 
-## Known issues (Work in progress)
+# Known issues (Work in progress)
 
 This project is by no means complete. It needs to be properly tested by other users than myself, to make sure everything is working as expected.
 
@@ -193,6 +193,6 @@ Video guide will be provided (soon, cough cough).
 
 
 
-## Do you like what I do?
+# Do you like what I do?
 
 No, I am not gonna sell-out. But I appreciate all the support of what I do at my twitch channel > https://www.twitch.tv/markusoooo (interactive stream with demon lord himself.. every viewer, that actually interacts on stream, is very welcome).
