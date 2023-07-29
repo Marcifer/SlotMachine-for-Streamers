@@ -1,4 +1,4 @@
-# Slot Machine for Streamers
+# Fully Customizable Slot Machine
 
 
 ## A fully customizable Slot Machine, which can be controlled with Streamer.bot
@@ -46,8 +46,10 @@ Video instructions comming soon (I say that a lot). Here is a text version in th
 ### Text Guide
 
 1. This guide assumes, that OBS and SB are installed, SB is connected to Twitch and/or Youtube and to the OBS itself (you can find a tutorial on how to do this on Youtube, here is one example by Nutty > https://www.youtube.com/watch?v=CcXAs-qZ0Ys).
+
 2. Unzip the zip file provided in this repo. In the zip folder, there will two text files (license and SB import), this readme and folder called `SlotMachine`. 
    Place folder `SlotMachine` somewhere on your disk, we will need to reference it later. For example, I will put it into the path `D:\StreamingStuff\SlotMachine`.
+
 3. Open OBS and create new `Scene` (**take note of the EXACT name of this scene**) and in this scene, `Add` > `Browser` (**also take note of EXACT name of this source**). Lets go over the fields in `Browser` source:
    - `URL` needs to contain URL of your `index.html` which can be found in our example path at `D:\StreamingStuff\SlotMachine\index.html`. Easiest way how to reference this file, is to open it in any browser (or just double click) and then paste the address into this field.
      For this example, it would be `file:///D:/StreamingStuff/SlotMachine/index.html`. I do not recommend checking `Local file` and selecting it that way.
@@ -56,6 +58,7 @@ Video instructions comming soon (I say that a lot). Here is a text version in th
    - Check `Shutdown source when not visible` & `Refresh browser when scene becomes active`.
    Click `Ok` and try hiding and showing the newly created source (you should see SlotMachine showing and hiding). If you do not see anything, you probably have wrong `URL`.
    OBS part is now done! Pat yourself on head and smile! :3
+
 4. Let's setup SB now. As mentioned in step 2, there is an import file called `StreamerBotImportSlotMachine.txt`, that you got from the zip folder you downloaded.
    In SB click on Import (on top bar of the window). New window called `Import Actions` should appear. 
    Drag and drop `StreamerBotImportSlotMachine.txt` into `Import String` field. You should see 8/8 actions and 6/6 commands being selected.
@@ -98,21 +101,34 @@ Video instructions comming soon (I say that a lot). Here is a text version in th
 ### Testing and explanation of commands
    
 It is time for *testing*, so let's go over the commands and how they work (**make sure, your SlotMachine source is hidden before testing!**). Try typing following commands into twitch/youtube chat:
--  !slots *points ammount* sets all pieces in action, if all checks are passed (minimum, maximum point ammounts, C# compiles, all arguments are happy, Lucifer smiles, etc..) it shows OBS source with Player Name (whoever started the game) and Credits with same ammount that are after the command !slots. Name of the points is by default called `points`, unless you changed it using your Points System of choice.
-   *example:* `!slots 200` initiated by me, would fill under Player: MarkusoOoO and under Credits: `200 points` (since I did not change default points to something else in my example).
-   **Side note: amount of point your are betting must be multiples of 10, eg. 10, 20, 30... 300, 310, 320... 1110, 1120... Reason being, actual spin cost is always devided by 10. If you try to use something like "!slots 111" it will not let you through and you will get a response in the chat.
--  !spin would start the Slot Machine and spin the reels. Cost of each spin is ALWAYS ammount bet at start devided by 10.
-   *example:* `!spin`
--  !lock *reel options* will lock selected reels. This Slot Machine has 3 reels to choose from. 
-   There are two rules for locking reels. You can lock only once in a row. If you receive one or more jackpot items on spin, lock is disabled that turn.
-   *examples:* `!lock 23`: locks second and third reel, `!lock 3`: locks third reel, `!lock 123`: locks all three reels (if you do this, and then you !spin, you just spent credits for nothing KEKW)
--  !transfer will move your Won points into your Credits (so you can continue spining).
-   *example:* before I use the command, I see that under Credits is 0 and under Won is 690. Using `!transfer` shift Won to 0 and Credits to 690, so I can continue spining using Credits.
--  !withdraw ends the game, hiding the source in OBS and summing up the game by adding together Credits and Won and adding them to the points of the player. All information is shown in twitch chat.
-   *example:* before I use the command, I see that under Credits, I have 420 and under Won is 690. Using `!withdraw` I see in chat, that game ended and I got 1110 points added to my current points.
 
-**Side note: Once somebody starts the game with !slots command, only that user can use commands tied with the game, nobody else! Not even you as a streamer. So game can only end in two situations: 1. Player reaches 0 at Credits and also has 0 at Won (game ends automatically, telling player he lost everything in chat). | 2. Player decides to use !withdrawn.**
-**To be able to force someone to quit the game as a mod or streamer, when they are trolling or something, I created Action called SlotsMachine ForceEnd and command !forceend tied to this action, which can be used only by you or your mods.**
+-  !slotStart *points ammount* sets all pieces in action, if all checks are passed (minimum, maximum point ammounts, C# compiles, OBS source and scene names are correct, all arguments are happy, Lucifer smiles, etc..) it shows OBS source with Player Name (whoever started the game) and Credits with same ammount that are after the command !slots. Name of the points is by default called `points`, unless you changed it using your Points System of choice (or use Testing argument, described below).
+
+   *example:* `!slotStart 200` initiated by me, would fill under Player: MarkusoOoO and under Credits: `200 points` (since I did not change default points to something else in my example).
+   **Side note: amount of point your are betting must be multiples of 10, eg. 10, 20, 30... 300, 310, 320... 1110, 1120... Reason being, actual spin cost is always devided by 10. If you try to use something like "!slotStart 111" it will not let you through and you will get a response in the chat.
+
+-  !slotSpin would start the Slot Machine and spin the reels. Cost of each spin is ALWAYS ammount bet at start devided by 10.
+
+   *example:* `!slotSpin`
+
+-  !slotLock *reel options* will lock selected reels. This Slot Machine has 3 reels to choose from. 
+   There are two rules for locking reels. You can lock only once in a row. If you receive one or more jackpot items on spin, lock is disabled that turn.
+
+   *examples:* `!slotLock 23`: locks second and third reel, `!slotLock 3`: locks third reel, `!slotLock 123`: locks all three reels (if you do this, and then you !slotSpin, you just spent credits for nothing KEKW)
+
+-  !slotTransfer will move your Won points into your Credits (so you can continue spining).
+
+   *example:* before I use the command, I see that under Credits is 0 and under Won is 690. Using `!slotTransfer` shift Won to 0 and Credits to 690, so I can continue spining using Credits.
+
+-  !slotWithdraw ends the game, hiding the source in OBS and summing up the game by adding together Credits and Won and adding them to the points of the player. All information is shown in twitch chat.
+
+   *example:* before I use the command, I see that under Credits, I have 420 and under Won is 690. Using `!slotWithdraw` I see in chat, that game ended and I got 1110 points added to my current points.
+
+
+**Side note: Once somebody starts the game with !slots command, only that user can use commands tied with the game, nobody else! Not even you as a streamer. So game can only end in two situations: 1. Player reaches 0 at Credits and also has 0 at Won (game ends automatically, telling player he lost everything in chat). | 2. Player decides to use !slotWithdraw.**
+
+**To be able to force someone to quit the game as a mod or streamer, when they are trolling or something, I created Action called 'SlotsMachine ForceEnd' and command !slotForceEnd tied to this action, which can be used only by you or your mods.**
+
 **You can use this command to quit the game for trollers (they will loose all of their points in Slot Machine if you use this command and resets the game, hiding the Slot Machine).**
 
 And here we are! Did all of the commands work as expected? Well, you just finished the setup! Well done! Get some ice cream, squeeze your plushie! **YOU** did it!
@@ -123,12 +139,17 @@ And here we are! Did all of the commands work as expected? Well, you just finish
 
 Here is list of possible issues that you could encounter:
 -  !slots command outputs that I have only 0 points. Well, you either should get some points first, or, you are not using any Points System. Please refer to top of this guide, where you can choose either VRFlad's Point System or TD's point system.
-   However, if you just want to make sure everything works and test the Slot Machine, you can, as a temporary workaround, set fix value of points to whoever calls the `!slots` command and triggers `SlotsMachine Redeem` action.
+
+   However, if you just want to make sure everything works and test the Slot Machine, you can, as a temporary workaround, set fix value of points to whoever calls the `!slotStart` command and triggers `SlotsMachine Redeem` action.
+
    I prepared required `Sub-Action` for this in `Action` called `SlotMachine redeem` in group called `Static points value and name group for testing without Points System`. Select `Sub-Action` inside this group, called `Set user specific (redeemer)`, right click it > `Enabled`. You can also double click it and change `Value` of 666 I put in there.
+
    Now you can test !slots and other commands. But you will always set user to have always the same ammount of points we just defined and it resets on each start of new game. So please, either use one of already made Points Systems or code your own.
    
    **Remember to disable that Set user specific subaction when you do not need it anymore for testing and have Points System in place!**
+
 -  !slots command does not output anything into the chat. Well, you probably forgot to enable the command descibed in step 4 of text guide, or something is crashing. Look into your log in SB and try to point out the issue or send it either to SB discord or try contacting me via DM with your log.
+
 -  Something else is not working? Refer to Find a bug? part bellow or if very desperate, my DMs on discord are always open.
 
 
