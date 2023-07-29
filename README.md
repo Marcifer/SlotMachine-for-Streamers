@@ -112,7 +112,10 @@ Video instructions coming soon (I say that a lot). Here is a text version in the
 
 ## Testing and explanation of commands
    
-It is time for *testing*, so let's go over the commands and how they work (**make sure, your SlotMachine source is hidden before testing!**). Try typing following commands into twitch/youtube chat:
+It is time for *testing*, so let's go over the commands and how they work (**make sure, your SlotMachine source is hidden before testing!**). 
+Once Slot Machine game starts with fsrst command !slotStart, any other command will work ONLY for user who started the game (exception is last command listed here, !slotsForceEnd). 
+
+Try typing following commands into twitch/youtube chat for testing:
 
 -  !slotStart *points ammount* sets all pieces in action, if all checks are passed (minimum, maximum point ammounts, C# compiles, OBS source and scene names are correct, all arguments are happy, Lucifer smiles, etc..) it shows OBS source with Player Name (whoever started the game) and Credits with same ammount that are after the command !slots. Name of the points is by default called `points`, unless you changed it using your Points System of choice (or use Testing argument, described below).
 
@@ -136,14 +139,14 @@ It is time for *testing*, so let's go over the commands and how they work (**mak
 
    *example:* before I use the command, I see that under Credits, I have 420 and under Won is 690. Using `!slotWithdraw` I see in chat, that game ended and I got 1110 points added to my current points.
 
+-  !slotForceEnd is only command, that can be used by anyone, so I highly recommend setting it as MODS ONLY in SB.
 
-**Side note: Once somebody starts the game with !slots command, only that user can use commands tied with the game, nobody else! Not even you as a streamer. So game can only end in two situations: 1. Player reaches 0 at Credits and also has 0 at Won (game ends automatically, telling player he lost everything in chat). | 2. Player decides to use !slotWithdraw.**
+   *example:* `!slotForceEnd` - same thing happens as with !slotWithdraw
 
-**To be able to force someone to quit the game as a mod or streamer, when they are trolling or something, I created Action called 'SlotsMachine ForceEnd' and command !slotForceEnd tied to this action, which can be used only by you or your mods.**
+**Side note: Once somebody starts the game with !slotStart command, only that user can use commands tied with the game, nobody else! Not even you as a streamer. However, there is one safeguard command, !slotsForceEnd, that will end the game immediately and it does not matter who writes it (I suggest making this MOD only command). There is three situations Slot Machine game ends: 1. Player reaches 0 at Credits and also has 0 at Won (game ends automatically, telling player he lost everything in chat). | 2. Player decides to use !slotWithdraw. | 3. Someone writes !slotsForceEnd (same as !slotWithdraw, but anyone can use it)**
 
-**You can use this command to quit the game for trollers (they will loose all of their points in Slot Machine if you use this command and resets the game, hiding the Slot Machine).**
 
-And here we are! Did all of the commands work as expected? Well, you just finished the setup! Well done! Get some ice cream, squeeze your plushie! **YOU** did it!
+### And here we are! Did all of the commands work as expected? Well, you just finished the setup! Well done! Get some ice cream, squeeze your plushie! **YOU** did it!
 
 
 
