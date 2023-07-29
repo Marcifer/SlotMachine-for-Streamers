@@ -82,26 +82,29 @@ Video instructions coming soon (I say that a lot). Here is a text version in the
      In SB select `Actions` and select `SlotMachine redeem` (this is Action that starts it all, binded to command !slots).
      `Sub-Actions` (right side of window) have few places that should be checked. On top there is folder called `Variables - CHECK ME!`. Click the small `+` button.
      You can find comments for each set of variables in SB itself, but lets glance over them also in this guide (double click each sub-action if you wish to change it).
-      - `connection` indicates which OBS instance we wish to use. If you use only one OBS instance, leave it at default value of `0`. If you use multiple instances of OBS (for multi PC stream   setup f.e.) look into `Stream Apps` tab and choose OBS instance (I know there are other apps then OBS, bit I choose to ignore those LUL) you wish to connect to (number is all the way to the   left).
+      - `connection` indicates which OBS instance we wish to use. If you use only one OBS instance, leave it at default value of `0`. If you use multiple instances of OBS (for multi PC stream   setup f.e.) look into `Stream Apps` tab and choose OBS instance (I know there are other apps then OBS, but I have chosen to ignore them LUL) you wish to connect to (number is all the way to the   left).
       - `slotsBetMin` & `slotsBetMax` indicate how much points is required in minimum to allow the game to start and how much is the maximum points. For both of them, please use multiples of 10   (**so our smallest possible ammount will be always 10!**). In short, do not use values that do not end with `0`.
       - `slotsStartActionName` is selfexplanatory from its name. It is name of Action in SB that is in imported group `SlotMachine by MarkusoOoO`. Very important, keep it at default if you do not   plan on renaming any Actions.
       - `slotsSceneName` & `slotsSceneSource` must match exactly Scene name and Source name in OBS (we already set this up in third point of this guide).
-       Once you checked/changed all variables, double click `Sub-Action` called `Execute Code (SlotMachine Redeem Crossroads)` and hit `Compile`. You should see in `Compiling Log` this message: `Building out needed information... Compiled successfully!` (if you see something else, you are probably missing some references, so click on `Find Refs` and then `Compile`). Click `Save   and Compile`.
-   
-   - ****
-   In SB `Actions` tab, select `SlotMachine Start`. Once again, on top, there is folder called `Variables - CHECK ONLY IF RENAMING`.
-   This folder contains names of all `Actions` from group `SlotMachine by MarkusoOoO`. There is no need to change anything, unless you are renaming them in SB.
-   Double click `Sub-Action` called `OBS Source Visibility State` and point it at your source created in step 2 of this guide (you can even click `Test` to make sure SlotMachine will show up). `State` needs to be on `Visible`.
-   
-   In SB `Actions` tab, select `SlotMachine Cashout`. Double click `Sub-Action` called `OBS Source Visibility State` and point it at your source created in step 2 of this guide (you can even click `Test` to make sure SlotMachine will hide). `State` needs to be on `Hidden`.
-   Then double click on `Sub-Action` called `Execute Code (Slot Cashout Crossroad)` and click on `Compile`. You should see in `Compiling Log` this message - `Building out needed information... Compiled successfully!` (if you see something else, you are probably missing some references, so click on `Find Refs` and then `Compile`). Click `Save and Compile`.
-   
-   For the last time, in SB `Actions` tab, select `SlotMachine Lock`.
-   Then double click on `Sub-Action` called `Execute Code (Check Reels Lock Argument Crossroad)` and click on `Compile`.
-   You should see in `Compiling Log` this message - `Building out needed information... Compiled successfully!` (if so, ignore three next lines in this guide and click `Save and Compile`.).
-   **If you see some dependency errors, here is a fix!**. In `Execute C# Code` window, next to `Compiling Log`, click on `References`.
-   You have to manually add `System.Linq.dll` & `System.Core.dll`. How? Right click the white space in `References` tab and click on `Add reference from file...`. Into `File name` fill in `System.Linq.dll` and click `Open`. And do same for `System.Core.dll`.
-   Try clicking `Compile` now and you should see in `Compiling Log` this message - `Building out needed information... Compiled successfully!`. Click `Save and Compile`.
+
+   - **Streamer.bot C# compile check**
+   There is three C# in actions, which needs to be checked:  
+       
+      - In SB select `Actions` and select `SlotMachine redeem`. Double click `Sub-Action` called `Execute Code (SlotMachine Redeem Crossroads)` and hit `Compile`. You should see in `Compiling Log` this message: `Building out needed information... Compiled successfully!` (if you see something else, you are probably missing some references, so click on `Find Refs` and then `Compile`). Click `Save   and Compile`.
+      
+      - In SB `Actions` tab, select `SlotMachine Cashout`. Then double click on `Sub-Action` called `Execute Code (Slot Cashout Crossroad)` and click on `Compile`. You should see in `Compiling Log` this message - `Building out needed information... Compiled successfully!` (if you see something else, you are probably missing some references, so click on `Find Refs` and then `Compile`). Click `Save and Compile`.
+      
+      - For the last time, in SB `Actions` tab, select `SlotMachine Lock`.
+      Then double click on `Sub-Action` called `Execute Code (Check Reels Lock Argument Crossroad)` and click on `Compile`.
+      You should see in `Compiling Log` this message - `Building out needed information... Compiled successfully!` (if so, ignore three next lines in this guide and click `Save and Compile`.).
+      **If you see some dependency errors, here is a fix!**. In `Execute C# Code` window, next to `Compiling Log`, click on `References`.
+      You have to manually add `System.Linq.dll` & `System.Core.dll`. How? Right click the white space in `References` tab and click on `Add reference from file...`. Into `File name` fill in `System.Linq.dll` and click `Open`. And do same for `System.Core.dll`.
+      Try clicking `Compile` now and you should see in `Compiling Log` this message - `Building out needed information... Compiled successfully!`. Click `Save and Compile`.
+
+   - **Do this only if you rename any of the actions**
+
+      In SB `Actions` tab, select `SlotMachine Start`. Once again, on top, there is folder called `Variables - CHECK ONLY IF RENAMING`.
+      This folder contains names of all `Actions` from group `SlotMachine by MarkusoOoO`. There is no need to change anything, unless you are renaming them in SB.
 
 **And you are done seting everything up!**
 

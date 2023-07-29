@@ -322,14 +322,14 @@ Vue.component('slot-machine', {
       if (jsonData.event.type == "Action") {
         // Force End the game for user
         if (eventActionName == this.forceEndgameActionName) {
-          this.cashOut()
+          this.cashOut();
         }
 
         // Check if user initiating the command is same as slotsPlayer
         const commandUserName =  jsonData.data.arguments.user;
         if (commandUserName == this.slotsPlayer) {
           if (eventActionName === this.spinActionName) {        
-            this.spin()
+            this.spin();
           }
           if (eventActionName === this.lockActionName) {
             const lockOptions = String(jsonData.data.arguments.rawInput);
@@ -352,10 +352,10 @@ Vue.component('slot-machine', {
             }
           }
           if (eventActionName === this.transferActionName) {
-            this.takeWin()
+            this.takeWin();
           } 
           if (eventActionName === this.endgameActionName) {
-            this.cashOut()
+            this.cashOut();
           }
         }
       }
