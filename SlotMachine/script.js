@@ -8,7 +8,7 @@ const WEBSOCKET_URI = "ws://" + ADDRESS + ":" + PORT + ENDPOINT;
 const EVENT_LISTENER_NAMEID = "Slot machine"; // Can be anything
 const ws = new WebSocket(WEBSOCKET_URI);
 
-// Item Names (only jackpotName is important for code flow)
+// Item Names
 const itemOneName = "Lemon";
 const itemTwoName = "Melon";
 const itemThreeName = "Grapes";
@@ -236,10 +236,13 @@ Vue.component('slot-machine', {
       spend: 100,
       credits: 100,
       spinCost: 10,
+      obsSceneName: null,
+      obsSourceName: null,
       spinActionName: null,
       lockActionName: null,
       transferActionName: null,
       endgameActionName: null,
+      forceEndgameActionName: null,
       cashoutActionName: null,
       reactionsActionName: null,
       win: 0,
@@ -282,24 +285,25 @@ Vue.component('slot-machine', {
       if (jsonData.id === EVENT_LISTENER_NAMEID) return;
       if (jsonData.id === "DoAction") return;
      
-      const eventActionName = jsonData.data.name
+      const eventActionName = jsonData.data.name;
 
       // Check if game started with defined SubAction
       if (jsonData.event.type == "SubAction" && eventActionName == `Get temp global "slotsPlayer" to "slotsPlayer", with default value of 'empty'`) {
         const parentName = jsonData.data.parentName;
         const startActionName = jsonData.data.arguments.slotsStartActionName;
         if (parentName == startActionName) {
-          const slotsBet =  parseInt(jsonData.data.arguments.slotsBet);
-          const slotsPlayer =  jsonData.data.arguments.user;
-          this.spend = slotsBet;
-          this.slotsPlayer = slotsPlayer;
-          this.credits = slotsBet;
-          this.spinCost = slotsBet / 10;
+          this.spend = parseInt(jsonData.data.arguments.slotsBet);
+          this.slotsPlayer = jsonData.data.arguments.user;
+          this.credits = this.spend;
+          this.spinCost = this.spend / 10;
           this.currency = jsonData.data.arguments.pointsname;
+          this.obsSceneName = jsonData.data.arguments.slotsSceneName;
+          this.obsSourceName = jsonData.data.arguments.slotsSourceName;
           this.spinActionName = jsonData.data.arguments.slotSpinActionName;
           this.lockActionName = jsonData.data.arguments.slotLockActionName;
           this.transferActionName = jsonData.data.arguments.slotTransferActionName;
           this.endgameActionName = jsonData.data.arguments.slotEndgameActionName;
+          this.forceEndgameActionName = jsonData.data.arguments.slotForceEndgameActionName;
           this.cashoutActionName = jsonData.data.arguments.slotCashoutActionName; 
           this.reactionsActionName = jsonData.data.arguments.slotReactionsActionName;
 
@@ -316,6 +320,11 @@ Vue.component('slot-machine', {
       }
 
       if (jsonData.event.type == "Action") {
+        // Force End the game for user
+        if (eventActionName == this.forceEndgameActionName) {
+          this.cashOut()
+        }
+
         // Check if user initiating the command is same as slotsPlayer
         const commandUserName =  jsonData.data.arguments.user;
         if (commandUserName == this.slotsPlayer) {
@@ -481,7 +490,9 @@ Vue.component('slot-machine', {
         args: {
             slotsWinnings: this.win + this.credits,
             slotsSpend: this.spend,
-            slotsPlayer: this.slotsPlayer
+            slotsPlayer: this.slotsPlayer,
+            slotsSceneName: this.obsSceneName,
+            slotsSourceName: this.obsSourceName
         }
       }));
     }
