@@ -62,21 +62,23 @@ Video instructions coming soon (I say that a lot). Here is a text version in the
 
 4. Let's setup SB now. 
 
-   - **Streamer.bot actions/commands import**    
+   - **Streamer.bot actions/commands import**
+
    As mentioned in step 2, there is an import file called `StreamerBotImportSlotMachine.txt`, that you got from the zip folder you downloaded.
    In SB click on Import (on top bar of the window). New window called `Import Actions` should appear. 
    Drag and drop `StreamerBotImportSlotMachine.txt` into `Import String` field. You should see 8/8 actions and 6/6 commands being selected.
    Click `Import` and on popup window click `OK` (we are gonna address that popup window now). In SB click on tab `Commands`, find group called `SlotMachine`, right click that group (with blue color) select `Group` > `Enable All` (or enable all commands one by one, if you struggle to find the option described).
    
    - **Slot Machine websockets settings**
+
    Now we need to make sure, that SB can communicate with Slot Machine. Select tab `Servers/Clients` > `Websocket Server` (Server, not Servers!).
    Check `Auto Start` (to make sure, we do not need to start the server every time we restart SB). And click on `Start Server`.
    Take note of the `Address`, `Port` and `Endpoint`. These must match with variables in `script.js` located in our example path at `D:\StreamingStuff\SlotMachine\script.js` first three uncommented lines (uncommented line = no `//` at start of the lines).
    In SB default values are: IP - `127.0.0.1`, Port - `8080`, Endpoint - `/`, so these should match with values in `script.js`. If they do not match or you use different values, change them accordingly on both places.
-   
-   Okay, we enabled commands and made sure SB communicates with our Slot Machine. Now let's make sure, all imported actions are setup correctly and working.
+   *Okay, we enabled commands and made sure SB communicates with our Slot Machine. Now let's make sure, all imported actions are setup correctly and working.*
    
    - **Streamer.bot Variables**
+   
    In SB select `Actions` and select `SlotMachine redeem` (this is Action that starts it all, binded to command !slots).
    `Sub-Actions` (right side of window) have few places that should be checked. On top there is folder called `Variables - CHECK ME!`. Click the small `+` button.
    You can find comments for each set of variables in SB itself, but lets glance over them also in this guide (double click each sub-action if you wish to change it).
@@ -86,6 +88,7 @@ Video instructions coming soon (I say that a lot). Here is a text version in the
      - `slotsSceneName` & `slotsSceneSource` must match exactly Scene name and Source name in OBS (we already set this up in third point of this guide).
      Once you checked/changed all variables, double click `Sub-Action` called `Execute Code (SlotMachine Redeem Crossroads)` and hit `Compile`. You should see in `Compiling Log` this message - `Building out needed information... Compiled successfully!` (if you see something else, you are probably missing some references, so click on `Find Refs` and then `Compile`). Click `Save and Compile`.
    
+   - ****
    In SB `Actions` tab, select `SlotMachine Start`. Once again, on top, there is folder called `Variables - CHECK ONLY IF RENAMING`.
    This folder contains names of all `Actions` from group `SlotMachine by MarkusoOoO`. There is no need to change anything, unless you are renaming them in SB.
    Double click `Sub-Action` called `OBS Source Visibility State` and point it at your source created in step 2 of this guide (you can even click `Test` to make sure SlotMachine will show up). `State` needs to be on `Visible`.
