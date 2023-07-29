@@ -16,7 +16,7 @@ Commands should use custom points system as a way to generate and manipulate poi
 
 
 
-## Small visual taste of how it works and looks (click on the image below for Youtube video)
+## Example video
 
 [![EXAMPLE VIDEO OF SLOT MACHINE](https://i.ytimg.com/vi_webp/vyXUFI1ySIw/maxresdefault.webp)](https://www.youtube.com/watch?v=vyXUFI1ySIw "Slot Machine Demo")
 
