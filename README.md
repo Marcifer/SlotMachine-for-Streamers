@@ -38,8 +38,9 @@ Video instructions comming soon (I say that a lot). Here is a text version in th
 -  OBS v29.1.3+ (https://obsproject.com/)
 -  Streamer.bot (SB) v0.1.22+ (https://streamer.bot/)
 -  Zip file provided in this repo
--  Determination and plushie to squeeze on successful implementation f.e. (https://www.kidrobot.com/products/marvel-deadpool-riding-unicorn-plush?variant=32772198269025)
 -  (Points system) is **NOT REQUIRED** but **HIGHLY recommended** (see top of this guide for my choices, or you can code your own Points system.. this project **WILL WORK** even without any Points system)
+-  Determination and plushie to squeeze on successful implementation f.e. (https://www.kidrobot.com/products/marvel-deadpool-riding-unicorn-plush?variant=32772198269025)
+
 
 
 
