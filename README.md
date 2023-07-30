@@ -45,7 +45,11 @@ Chat widget seen in the demo video was made by ***Blackywersonst*** (https://www
 
 
 
+## Video Guide
+
 Video instructions coming soon (I say that a lot). Here is a text version in the "meantime".
+
+
 
 ## Text Guide
 
