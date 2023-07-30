@@ -214,9 +214,7 @@ If you found an issue or would like to submit an improvement to this project, pl
 
 This project is by no means complete. It needs to be properly tested by other users than myself, to make sure everything is working as expected.
 
-TD's Points system might not work (I did not test it yet). I will implement it eventually (wink).
-
-Youtube chat commands were not tested. They should work without any issues (in theory). I will be glad for feedback on that.
+TD's Points system might not work in current release (I did not test it properly yet). I will implement it eventually (wink).
 
 Video guide will be provided (soon, cough cough).
 
