@@ -159,7 +159,7 @@ Try typing following commands into twitch/youtube chat for testing:
 
 
 
-## What can go wrong?
+# What can go wrong?
 
 Here is list of possible issues that you could encounter:
 -  !slotStart command outputs that I have only 0 points. Well, you either should get some points first, or, you are not using any Points System. Please refer to top of this guide, where you can choose either VRFlad's Point System or TD's point system.
