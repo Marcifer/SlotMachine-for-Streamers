@@ -8,7 +8,7 @@ Original Pen created on CodePen.io. Original URL: (https://codepen.io/rattatat/p
 Pen tweaked and modified by ***MarkusoOoO*** (https://www.twitch.tv/markusoooo) 
 to work with Streamer.bot (https://streamer.bot/).
 
-This project uses VueJS to create interactable Slot Machine which can be controled using websocket server that communicates with Streamer.bot (*I will use shortcut SB from now on in this document*), to enhance control of the Slot Machine.
+This project uses VueJS to create interactive Slot Machine which can be controled using websocket server that communicates with Streamer.bot (*I will use shortcut SB from now on in this document*), to enhance control of the Slot Machine.
 
 You can control Slot Machine using commands written into the chat of your stream.
 
