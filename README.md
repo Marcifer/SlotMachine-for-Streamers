@@ -38,6 +38,7 @@ Video instructions coming soon (I say that a lot). Here is a text version in the
 -  Streamer.bot (SB) v0.1.22+ (https://streamer.bot/)
 -  Zip file provided in the latest Release of this repository (https://github.com/Marcifer/SlotMachine-for-Streamers/releases)
 -  (Points system) is **NOT REQUIRED** but **HIGHLY recommended** (Commands should use custom points system as a way to generate and manipulate points for Slot Machine... this project **WILL WORK** even without any Points system)
+   
    Here are examples of points system that can be used for this project:
       - **VRFlad's points system - TESTED** > https://www.youtube.com/watch?v=VCnoT7wqNrE
       - *TerrierDart's points system - NEEDS TESTING, may not work in current version* > https://terrierdarts.pages.dev/en/ranking_system/core/
