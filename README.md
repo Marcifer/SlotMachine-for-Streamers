@@ -168,7 +168,7 @@ Here is list of possible issues that you could encounter:
 
    I prepared required `Sub-Action` for this in `Action` called `SlotMachine redeem` in group called `Static points value and name group for testing without Points System`. Select `Sub-Action` inside this group, called `Set user specific (redeemer)`, right click it > `Enabled`. You can also double click it and change `Value` of 666 I put in there.
 
-   Now you can test !slots and other commands. But you will always set user to have always the same amount of points we just defined and it resets on each start of new game. So please, either use one of already made Points Systems or code your own.
+   Now you can test !slots and other commands. But you will always set user to have the same amount of points we just defined and it will resets itself on each start of new game. So please, either use one of already made Points Systems or code your own.
    
    **Remember to disable that Set user specific subaction when you do not need it anymore for testing and have Points System in place!**
 
