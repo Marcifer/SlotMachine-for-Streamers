@@ -12,7 +12,8 @@ This project uses VueJS to create interactable Slot Machine which can be control
 
 You can control Slot Machine using commands written into the chat of your stream.
 
-Commands should use custom points system as a way to generate and manipulate points for Slot Machine. Here are two examples, that can be used:
+Commands should use custom points system as a way to generate and manipulate points for Slot Machine. 
+Here are two examples that can be used:
   - **VRFlad's points system - TESTED** > https://www.youtube.com/watch?v=VCnoT7wqNrE
   - *TerrierDart's points system - NEEDS TESTING, may not work in current version* > https://terrierdarts.pages.dev/en/ranking_system/core/
 
@@ -51,7 +52,7 @@ Video instructions coming soon (I say that a lot). Here is a text version in the
 
 1. This guide assumes, that OBS and SB are installed, SB is connected to Twitch and/or Youtube and to the OBS itself (you can find a tutorial on how to do this on Youtube, here is one example by Nutty > https://www.youtube.com/watch?v=CcXAs-qZ0Ys).
 
-2. Unzip the zip file provided in latest Release. In the unziped folder, there will two text files (license and SB import), this readme and folder called `SlotMachine`. 
+2. Unzip the zip file provided in latest Release. In the unzipped folder, there will two text files (license and SB import), this readme and folder called `SlotMachine`. 
    Place folder `SlotMachine` somewhere on your disk, we will need to reference it later. For example, I will put it into the path `D:\StreamingStuff\SlotMachine`.
 
 3. Open OBS and create new `Scene` (**take note of the EXACT name of this scene**) and in this scene, `Add` > `Browser` (**also take note of EXACT name of this source**). Lets go over the fields in `Browser` source:
@@ -68,34 +69,34 @@ Video instructions coming soon (I say that a lot). Here is a text version in the
    - **Streamer.bot actions/commands import**
 
      As mentioned in step 2, there is an import file called `StreamerBotImportSlotMachine.txt`, that you got from the zip folder you downloaded.
-     In SB click on Import (on top bar of the window). New window called `Import Actions` should appear. 
-     Drag and drop `StreamerBotImportSlotMachine.txt` into `Import String` field. You should see 8/8 actions and 6/6 commands being selected.
-     Click `Import` and on popup window click `OK` (we are gonna address that popup window now). In SB click on tab `Commands`, find group called `SlotMachine`, right click that group (with blue   color) select `Group` > `Enable All` (or enable all commands one by one, if you struggle to find the option described).
+     In SB, click on Import (on the top bar of the window). A new window called `Import Actions` should appear. 
+     Drag and drop `StreamerBotImportSlotMachine.txt` into the `Import String` field. You should see 8/8 actions and 6/6 commands being selected.
+     Click `Import` and on popup window click `OK` (we are gonna address that popup window now). In SB, click on tab `Commands`, find a group called `SlotMachine`, right click that group (with blue   color), select `Group` > `Enable All` (or enable all commands one by one, if you struggle to find the option described).
    
    - **Slot Machine websockets settings**
 
      Now we need to make sure, that SB can communicate with Slot Machine. Select tab `Servers/Clients` > `Websocket Server` (Server, not Servers!).
      Check `Auto Start` (to make sure, we do not need to start the server every time we restart SB). And click on `Start Server`.
      Take note of the `Address`, `Port` and `Endpoint`. These must match with variables in `script.js` located in our example path at `D:\StreamingStuff\SlotMachine\script.js` first three   uncommented lines (uncommented line = no `//` at start of the lines).
-     In SB default values are: IP - `127.0.0.1`, Port - `8080`, Endpoint - `/`, so these should match with values in `script.js`. If they do not match or you use different values, change them   accordingly on both places.
+     In SB, default values are: IP - `127.0.0.1`, Port - `8080`, Endpoint - `/`, so these should match with values in `script.js`. If they do not match or you use different values, change them   accordingly in both places.
      *Okay, we enabled commands and made sure SB communicates with our Slot Machine. Now let's make sure, all imported actions are setup correctly and working.*
    
    - **Streamer.bot Variables**
    
-     In SB select `Actions` and select `SlotMachine redeem` (this is Action that starts it all, binded to command !slots).
-     `Sub-Actions` (right side of window) have few places that should be checked. On top there is folder called `Variables - CHECK ME!`. Click the small `+` button.
-     You can find comments for each set of variables in SB itself, but lets glance over them also in this guide (double click each sub-action if you wish to change it).
-      - `connection` indicates which OBS instance we wish to use. If you use only one OBS instance, leave it at default value of `0`. If you use multiple instances of OBS (for multi PC stream   setup f.e.) look into `Stream Apps` tab and choose OBS instance (I know there are other apps then OBS, but I have chosen to ignore them LUL) you wish to connect to (number is all the way to the   left).
-      - `slotsBetMin` & `slotsBetMax` indicate how much points is required in minimum to allow the game to start and how much is the maximum points. For both of them, please use multiples of 10   (**so our smallest possible ammount will be always 10!**). In short, do not use values that do not end with `0`.
-      - `slotsStartActionName` is selfexplanatory from its name. It is name of Action in SB that is in imported group `SlotMachine by MarkusoOoO`. Very important, keep it at default if you do not   plan on renaming any Actions.
-      - `slotsSceneName` & `slotsSceneSource` must match exactly Scene name and Source name in OBS (we already set this up in third point of this guide).
+     In SB select `Actions` and select `SlotMachine redeem` (this is Action that starts it all, binded to command !slotStart).
+     `Sub-Actions` (right side of window) have a few places that should be checked. On top there is a folder called `Variables - CHECK ME!`. Click the small `+` button.
+     You can find comments for each set of variables in SB itself, but let's glance over them also in this guide (double click each sub-action if you wish to change it).
+      - `connection` indicates which OBS instance we wish to use. If you use only one OBS instance, leave it at the default value of `0`. If you use multiple instances of OBS (for multi PC stream   setup f.e.) look into the `Stream Apps` tab and choose OBS instance (I know there are other apps than OBS, but I have chosen to ignore them, LUL) you wish to connect to (number is all the way to the   left).
+      - `slotsBetMin` & `slotsBetMax` indicate how much points is required in minimum to allow the game to start and how much is the maximum points. For both of them, please use multiples of 10   (**so our smallest possible amount will always be 10!**). In short, do not use values that do not end with `0`.
+      - `slotsStartActionName` is self explanatory from its name. It is the name of Action in SB, which is in the imported group `SlotMachine by MarkusoOoO`. Very important, keep it at default if you do not   plan on renaming any Actions.
+      - `slotsSceneName` & `slotsSceneSource` must match exactly Scene name and Source name in OBS (we already set this up at the third point of this guide).
 
    - **Streamer.bot C# compile check**
    There is three C# in actions, which needs to be checked:  
        
       - In SB select `Actions` and select `SlotMachine redeem`. Double click `Sub-Action` called `Execute Code (SlotMachine Redeem Crossroads)` and hit `Compile`. You should see in `Compiling Log` this message: `Building out needed information... Compiled successfully!` (if you see something else, you are probably missing some references, so click on `Find Refs` and then `Compile`). Click `Save   and Compile`.
       
-      - In SB `Actions` tab, select `SlotMachine Cashout`. Then double click on `Sub-Action` called `Execute Code (Slot Cashout Crossroad)` and click on `Compile`. You should see in `Compiling Log` this message - `Building out needed information... Compiled successfully!` (if you see something else, you are probably missing some references, so click on `Find Refs` and then `Compile`). Click `Save and Compile`.
+      - In SB the `Actions` tab, select `SlotMachine Cashout`. Then double click on `Sub-Action` called `Execute Code (Slot Cashout Crossroad)` and click on `Compile`. You should see in `Compiling Log` this message - `Building out needed information... Compiled successfully!` (if you see something else, you are probably missing some references, so click on `Find Refs` and then `Compile`). Click `Save and Compile`.
       
       - For the last time, in SB `Actions` tab, select `SlotMachine Lock`.
       Then double click on `Sub-Action` called `Execute Code (Check Reels Lock Argument Crossroad)` and click on `Compile`.
@@ -109,7 +110,7 @@ Video instructions coming soon (I say that a lot). Here is a text version in the
       In SB `Actions` tab, select `SlotMachine Start`. Once again, on top, there is folder called `Variables - CHECK ONLY IF RENAMING`.
       This folder contains names of all `Actions` from group `SlotMachine by MarkusoOoO`. There is no need to change anything, unless you are renaming them in SB.
 
-**And you are done seting everything up!**
+**And you are done setting everything up!**
 
 
 
@@ -128,9 +129,9 @@ Try typing following commands into twitch/youtube chat for testing:
 -  !slotStart *points ammount* sets all pieces in action, if all checks are passed (minimum, maximum point ammounts, C# compiles, OBS source and scene names are correct, all arguments are happy, Lucifer smiles, etc..) it shows OBS source with Player Name (whoever started the game) and Credits with same ammount that are after the command !slots. Name of the points is by default called `points`, unless you changed it using your Points System of choice (or use Testing argument, described below).
 
    *example:* `!slotStart 200` initiated by me, would fill under Player: MarkusoOoO and under Credits: `200 points` (since I did not change default points to something else in my example).
-   **Side note: amount of point your are betting must be multiples of 10, eg. 10, 20, 30... 300, 310, 320... 1110, 1120... Reason being, actual spin cost is always devided by 10. If you try to use something like "!slotStart 111" it will not let you through and you will get a response in the chat.
+   **Side note: amount of point your are betting must be multiples of 10, eg. 10, 20, 30... 300, 310, 320... 1110, 1120... Reason being, actual spin cost is always divided by 10. If you try to use something like "!slotStart 111" it will not let you through and you will get a response in the chat.
 
--  !slotSpin would start the Slot Machine and spin the reels. Cost of each spin is ALWAYS ammount bet at start devided by 10.
+-  !slotSpin would start the Slot Machine and spin the reels. Cost of each spin is ALWAYS ammount bet at start divided by 10.
 
    *example:* `!slotSpin`
 
@@ -141,7 +142,7 @@ Try typing following commands into twitch/youtube chat for testing:
 
 -  !slotTransfer will move your Won points into your Credits (so you can continue spining).
 
-   *example:* before I use the command, I see that under Credits is 0 and under Won is 690. Using `!slotTransfer` shift Won to 0 and Credits to 690, so I can continue spining using Credits.
+   *example:* before I use the command, I see that under Credits is 0 and under Won is 690. Using `!slotTransfer` shift Won to 0 and Credits to 690, so I can continue spinning using Credits.
 
 -  !slotWithdraw ends the game, hiding the source in OBS and summing up the game by adding together Credits and Won and adding them to the points of the player. All information is shown in twitch chat.
 
@@ -167,11 +168,11 @@ Here is list of possible issues that you could encounter:
 
    I prepared required `Sub-Action` for this in `Action` called `SlotMachine redeem` in group called `Static points value and name group for testing without Points System`. Select `Sub-Action` inside this group, called `Set user specific (redeemer)`, right click it > `Enabled`. You can also double click it and change `Value` of 666 I put in there.
 
-   Now you can test !slots and other commands. But you will always set user to have always the same ammount of points we just defined and it resets on each start of new game. So please, either use one of already made Points Systems or code your own.
+   Now you can test !slots and other commands. But you will always set user to have always the same amount of points we just defined and it resets on each start of new game. So please, either use one of already made Points Systems or code your own.
    
    **Remember to disable that Set user specific subaction when you do not need it anymore for testing and have Points System in place!**
 
--  !slots command does not output anything into the chat. Well, you probably forgot to enable the command descibed in step 4 of text guide, or something is crashing. Look into your log in SB and try to point out the issue or send it either to SB discord or try contacting me via DM with your log.
+-  !slots command does not output anything into the chat. Well, you probably forgot to enable the command described in step 4 of text guide, or something is crashing. Look into your log in SB and try to point out the issue or send it either to SB discord or try contacting me via DM with your log.
 
 -  Something else is not working? Refer to Find a bug? part bellow or if very desperate, my DMs on discord are always open.
 
