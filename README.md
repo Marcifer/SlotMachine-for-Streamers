@@ -92,8 +92,8 @@ Video instructions coming soon (I say that a lot). Here is a text version in the
       - `slotsSceneName` & `slotsSceneSource` must match exactly Scene name and Source name in OBS (we already set this up at the third point of this guide).
 
    - **Streamer.bot C# compile check**
-   
-   There is three C# in actions, which needs to be checked:  
+
+      There is three C# in actions, which needs to be checked:  
        
       - In SB select `Actions` and select `SlotMachine redeem`. Double click `Sub-Action` called `Execute Code (SlotMachine Redeem Crossroads)` and hit `Compile`. You should see in `Compiling Log` this message: `Building out needed information... Compiled successfully!` (if you see something else, you are probably missing some references, so click on `Find Refs` and then `Compile`). Click `Save   and Compile`.
       
