@@ -55,7 +55,7 @@ Video instructions coming soon (I say that a lot). Here is a text version in the
 
 1. This guide assumes, that OBS and SB are installed, SB is connected to Twitch and/or Youtube and to the OBS itself (you can find a tutorial on how to do this on Youtube, here is one example by Nutty > https://www.youtube.com/watch?v=CcXAs-qZ0Ys).
 
-2. Unzip the zip file provided in latest Release. In the unzipped folder, there will two text files (license and SB import), this readme and folder called `SlotMachine`. 
+2. Unzip the zip file provided in latest Release. In the unzipped folder, there are two text files (license and SB import), this readme and folder called `SlotMachine`. 
    Place folder `SlotMachine` somewhere on your disk, we will need to reference it later. For example, I will put it into the path `D:\StreamingStuff\SlotMachine`.
 
 3. Open OBS and create new `Scene` (**take note of the EXACT name of this scene**) and in this scene, `Add` > `Browser` (**also take note of EXACT name of this source**). Lets go over the fields in `Browser` source:
