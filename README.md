@@ -122,11 +122,11 @@ Video instructions coming soon (I say that a lot). Here is a text version in the
 
 (**make sure, your SlotMachine source is hidden before testing!**).
 
-Once Slot Machine game starts with first command !slotStart, any other command will work ONLY for user who started the game (exception is last command listed here, !slotsForceEnd). 
+Once Slot Machine game starts with first command !slotStart, any other command will work ONLY for user who started the game (exception is last command listed here, !slotForceEnd). 
 
 Try typing following commands into twitch/youtube chat for testing:
 
--  !slotStart *points ammount* sets all pieces in action, if all checks are passed (minimum, maximum point ammounts, C# compiles, OBS source and scene names are correct, all arguments are happy, Lucifer smiles, etc..) it shows OBS source with Player Name (whoever started the game) and Credits with same ammount that are after the command !slots. Name of the points is by default called `points`, unless you changed it using your Points System of choice (or use Testing argument, described below).
+-  !slotStart *points ammount* sets all pieces in action, if all checks are passed (minimum, maximum point ammounts, C# compiles, OBS source and scene names are correct, all arguments are happy, Lucifer smiles, etc..) it shows OBS source with Player Name (whoever started the game) and Credits with same ammount that are after the command !slotStart. Name of the points is by default called `points`, unless you changed it using your Points System of choice (or use Testing argument, described below).
 
    *example:* `!slotStart 200` initiated by me, would fill under Player: MarkusoOoO and under Credits: `200 points` (since I did not change default points to something else in my example).
    **Side note: amount of point your are betting must be multiples of 10, eg. 10, 20, 30... 300, 310, 320... 1110, 1120... Reason being, actual spin cost is always divided by 10. If you try to use something like "!slotStart 111" it will not let you through and you will get a response in the chat.
@@ -152,7 +152,7 @@ Try typing following commands into twitch/youtube chat for testing:
 
    *example:* `!slotForceEnd` - same thing happens as with !slotWithdraw
 
-**Side note: Once somebody starts the game with !slotStart command, only that user can use commands tied with the game, nobody else! Not even you as a streamer. However, there is one safeguard command, !slotsForceEnd, that will end the game immediately and it does not matter who writes it (I suggest making this MOD only command). There is three situations Slot Machine game ends: 1. Player reaches 0 at Credits and also has 0 at Won (game ends automatically, telling player he lost everything in chat). | 2. Player decides to use !slotWithdraw. | 3. Someone writes !slotsForceEnd (same as !slotWithdraw, but anyone can use it)**
+**Side note: Once somebody starts the game with !slotStart command, only that user can use commands tied with the game, nobody else! Not even you as a streamer. However, there is one safeguard command, !slotForceEnd, that will end the game immediately and it does not matter who writes it (I suggest making this MOD only command). There is three situations Slot Machine game ends: 1. Player reaches 0 at Credits and also has 0 at Won (game ends automatically, telling player he lost everything in chat). | 2. Player decides to use !slotWithdraw. | 3. Someone writes !slotForceEnd (same as !slotWithdraw, but anyone can use it)**
 
 
 ### And here we are! Did all of the commands work as expected? Well, you just finished the setup! Well done! Get some ice cream, squeeze your plushie! **YOU** did it!
@@ -162,17 +162,17 @@ Try typing following commands into twitch/youtube chat for testing:
 ## What can go wrong?
 
 Here is list of possible issues that you could encounter:
--  !slots command outputs that I have only 0 points. Well, you either should get some points first, or, you are not using any Points System. Please refer to top of this guide, where you can choose either VRFlad's Point System or TD's point system.
+-  !slotStart command outputs that I have only 0 points. Well, you either should get some points first, or, you are not using any Points System. Please refer to top of this guide, where you can choose either VRFlad's Point System or TD's point system.
 
    However, if you just want to make sure everything works and test the Slot Machine, you can, as a temporary workaround, set fix value of points to whoever calls the `!slotStart` command and triggers `SlotsMachine Redeem` action.
 
    I prepared required `Sub-Action` for this in `Action` called `SlotMachine redeem` in group called `Static points value and name group for testing without Points System`. Select `Sub-Action` inside this group, called `Set user specific (redeemer)`, right click it > `Enabled`. You can also double click it and change `Value` of 666 I put in there.
 
-   Now you can test !slots and other commands. But you will always set user to have the same amount of points we just defined and it will resets itself on each start of new game. So please, either use one of already made Points Systems or code your own.
+   Now you can test !slotStart and other commands. But you will always set user to have the same amount of points we just defined and it will resets itself on each start of new game. So please, either use one of already made Points Systems or code your own.
    
    **Remember to disable that Set user specific subaction when you do not need it anymore for testing and have Points System in place!**
 
--  !slots command does not output anything into the chat. Well, you probably forgot to enable the command described in step 4 of text guide, or something is crashing. Look into your log in SB and try to point out the issue or send it either to SB discord or try contacting me via DM with your log.
+-  !slotStart command does not output anything into the chat. Well, you probably forgot to enable the command described in step 4 of text guide, or something is crashing. Look into your log in SB and try to point out the issue or send it either to SB discord or try contacting me via DM with your log.
 
 -  Something else is not working? Refer to Find a bug? part bellow or if very desperate, my DMs on discord are always open.
 
