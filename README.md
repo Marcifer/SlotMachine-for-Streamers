@@ -96,18 +96,20 @@ Video instructions coming soon (I say that a lot). Here is a text version in the
 
    - **Streamer.bot C# compile check**
 
-      There is three C# sub-actions in the actions and each of them needs to be checked:  
+      There is four C# sub-actions in the actions and each of them needs to be checked:  
        
       1. In SB select `Actions` and select `SlotMachine redeem`. Double click `Sub-Action` called `Execute Code (SlotMachine Redeem Crossroads)` and hit `Compile`. You should see in `Compiling Log` this message: `Building out needed information... Compiled successfully!` (if you see something else, you are probably missing some references, so click on `Find Refs` and then `Compile`). Click `Save   and Compile`.
       
       2. In SB the `Actions` tab, select `SlotMachine Cashout`. Then double click on `Sub-Action` called `Execute Code (Slot Cashout Crossroad)` and click on `Compile`. You should see in `Compiling Log` this message - `Building out needed information... Compiled successfully!` (if you see something else, you are probably missing some references, so click on `Find Refs` and then `Compile`). Click `Save and Compile`.
       
-      3. For the last time, in SB `Actions` tab, select `SlotMachine Lock`.
+      3. In SB `Actions` tab, select `SlotMachine Lock`.
       Then double click on `Sub-Action` called `Execute Code (Check Reels Lock Argument Crossroad)` and click on `Compile`.
       You should see in `Compiling Log` this message - `Building out needed information... Compiled successfully!` (if so, ignore three next lines in this guide and click `Save and Compile`.).
       **If you see some dependency errors, here is a fix!**. In `Execute C# Code` window, next to `Compiling Log`, click on `References`.
       You have to manually add `System.Linq.dll` & `System.Core.dll`. How? Right click the white space in `References` tab and click on `Add reference from file...`. Into `File name` fill in `System.Linq.dll` and click `Open`. And do same for `System.Core.dll`.
       Try clicking `Compile` now and you should see in `Compiling Log` this message - `Building out needed information... Compiled successfully!`. Click `Save and Compile`.
+
+      4. Last one is hidden inside the `Action` called `SlotMachine redeem` in the group `Static points value and name group for testing without Points System`. Double click it and make sure it compiles as the rest of them. Leave this C# `Sub-Action` disabled (you can tell it is disabled, since it has purple color, not white). Enable it **ONLY IF** you need it for testing, since you do not use any Points System. 
 
    - **Do this only if you rename any of the actions**
 
@@ -170,7 +172,7 @@ Here is list of possible issues that you could encounter:
 
    However, if you just want to make sure everything works and test the Slot Machine, you can, as a temporary workaround, set fix value of points to whoever calls the `!slotStart` command and triggers `SlotsMachine Redeem` action.
 
-   I prepared required `Sub-Action` for this in `Action` called `SlotMachine redeem` in group called `Static points value and name group for testing without Points System`. Select `Sub-Action` inside this group, called `Set user specific (redeemer)`, right click it > `Enabled`. You can also double click it and change `Value` of 666 I put in there.
+   I prepared required C# `Sub-Action` for this in `Action` called `SlotMachine redeem` in group called `Static points value and name group for testing without Points System`. Select `Sub-Action` inside this group, called `Execute Code (Slot Redeem TESTING without Points System)`, right click it > `Enabled`. There are also two more `Sub-Actions`, with values of ammount of testing points and points name (you can change that if you wish, default testing ammount is `666` with points name `nyah`).
 
    Now you can test !slotStart and other commands. But you will always set user to have the same amount of points we just defined and it will resets itself on each start of new game. So please, either use one of already made Points Systems or code your own.
    
@@ -194,7 +196,7 @@ Other resource changes, eg. images of items on Slot Machine or sounds effects, c
 If you want to change colors, positioning, fonts, font size, etc... use `style.css`. Pro TIP, you can use show and hide source transition, to make browser source appearing and disappearing look way smoother. Also, you can add overlay on top of browser source, which can look like actual Slot Machine!
 
 You want to change currency name? Use **Points System** for that. Or you can **just for testing** use pre-made `Sub-Action` in `Action` called `SlotMachine redeem` in group called `Static points value and name group for testing without Points System`. 
-Select `Sub-Action` inside this group, called `Set argument %pointsname%`, right click it > `Enabled`. You can also double click it and change `Value` of "chimi" I put in there.
+Double click `Sub-Action` inside this group, called `Set argument %pointsname%` and change `Value` to whatever name of points you want.
 
 **Remember to disable that Set argument subaction when you do not need it anymore for testing and have Points System in place!**
 
