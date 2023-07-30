@@ -12,11 +12,6 @@ This project uses VueJS to create interactable Slot Machine which can be control
 
 You can control Slot Machine using commands written into the chat of your stream.
 
-Commands should use custom points system as a way to generate and manipulate points for Slot Machine. 
-Here are two examples that can be used:
-  - **VRFlad's points system - TESTED** > https://www.youtube.com/watch?v=VCnoT7wqNrE
-  - *TerrierDart's points system - NEEDS TESTING, may not work in current version* > https://terrierdarts.pages.dev/en/ranking_system/core/
-
 
 
 
@@ -42,7 +37,10 @@ Video instructions coming soon (I say that a lot). Here is a text version in the
 -  OBS v29.1.3+ (https://obsproject.com/)
 -  Streamer.bot (SB) v0.1.22+ (https://streamer.bot/)
 -  Zip file provided in the latest Release of this repository (https://github.com/Marcifer/SlotMachine-for-Streamers/releases)
--  (Points system) is **NOT REQUIRED** but **HIGHLY recommended** (see top of this guide for my choices, or you can code your own Points system.. this project **WILL WORK** even without any Points system)
+-  (Points system) is **NOT REQUIRED** but **HIGHLY recommended** (Commands should use custom points system as a way to generate and manipulate points for Slot Machine... this project **WILL WORK** even without any Points system)
+   Here are examples of points system that can be used for this project:
+      - **VRFlad's points system - TESTED** > https://www.youtube.com/watch?v=VCnoT7wqNrE
+      - *TerrierDart's points system - NEEDS TESTING, may not work in current version* > https://terrierdarts.pages.dev/en/ranking_system/core/
 -  Determination and plushie to squeeze on successful implementation f.e. (https://www.kidrobot.com/products/marvel-deadpool-riding-unicorn-plush?variant=32772198269025)
 
 
