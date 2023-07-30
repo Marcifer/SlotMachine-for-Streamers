@@ -1,7 +1,7 @@
 # Fully Customizable Slot Machine
 
 
-## A fully customizable Slot Machine, which can be controlled with Streamer.bot
+## Fully Customizable Slot Machine interectable with chat commands using Streamer.bot   
 
 Original Pen created on CodePen.io. Original URL: (https://codepen.io/rattatat/pen/mXqJEq).
 
