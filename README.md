@@ -93,13 +93,13 @@ Video instructions coming soon (I say that a lot). Here is a text version in the
 
    - **Streamer.bot C# compile check**
 
-      There is three C# in actions, which needs to be checked:  
+      There is three C# sub-actions in the actions and each of them needs to be checked:  
        
-      - In SB select `Actions` and select `SlotMachine redeem`. Double click `Sub-Action` called `Execute Code (SlotMachine Redeem Crossroads)` and hit `Compile`. You should see in `Compiling Log` this message: `Building out needed information... Compiled successfully!` (if you see something else, you are probably missing some references, so click on `Find Refs` and then `Compile`). Click `Save   and Compile`.
+      1. In SB select `Actions` and select `SlotMachine redeem`. Double click `Sub-Action` called `Execute Code (SlotMachine Redeem Crossroads)` and hit `Compile`. You should see in `Compiling Log` this message: `Building out needed information... Compiled successfully!` (if you see something else, you are probably missing some references, so click on `Find Refs` and then `Compile`). Click `Save   and Compile`.
       
-      - In SB the `Actions` tab, select `SlotMachine Cashout`. Then double click on `Sub-Action` called `Execute Code (Slot Cashout Crossroad)` and click on `Compile`. You should see in `Compiling Log` this message - `Building out needed information... Compiled successfully!` (if you see something else, you are probably missing some references, so click on `Find Refs` and then `Compile`). Click `Save and Compile`.
+      2. In SB the `Actions` tab, select `SlotMachine Cashout`. Then double click on `Sub-Action` called `Execute Code (Slot Cashout Crossroad)` and click on `Compile`. You should see in `Compiling Log` this message - `Building out needed information... Compiled successfully!` (if you see something else, you are probably missing some references, so click on `Find Refs` and then `Compile`). Click `Save and Compile`.
       
-      - For the last time, in SB `Actions` tab, select `SlotMachine Lock`.
+      3. For the last time, in SB `Actions` tab, select `SlotMachine Lock`.
       Then double click on `Sub-Action` called `Execute Code (Check Reels Lock Argument Crossroad)` and click on `Compile`.
       You should see in `Compiling Log` this message - `Building out needed information... Compiled successfully!` (if so, ignore three next lines in this guide and click `Save and Compile`.).
       **If you see some dependency errors, here is a fix!**. In `Execute C# Code` window, next to `Compiling Log`, click on `References`.
