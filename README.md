@@ -115,8 +115,13 @@ Video instructions coming soon (I say that a lot). Here is a text version in the
 
 ## Testing and explanation of commands
    
-It is time for *testing*, so let's go over the commands and how they work (**make sure, your SlotMachine source is hidden before testing!**). 
-Once Slot Machine game starts with fsrst command !slotStart, any other command will work ONLY for user who started the game (exception is last command listed here, !slotsForceEnd). 
+
+
+### It is time for *testing*, so let's go over the commands and how they work 
+
+(**make sure, your SlotMachine source is hidden before testing!**).
+
+Once Slot Machine game starts with first command !slotStart, any other command will work ONLY for user who started the game (exception is last command listed here, !slotsForceEnd). 
 
 Try typing following commands into twitch/youtube chat for testing:
 
