@@ -172,7 +172,7 @@ Here is list of possible issues that you could encounter:
 
    However, if you just want to make sure everything works and test the Slot Machine, you can, as a temporary workaround, set fix value of points to whoever calls the `!slotStart` command and triggers `SlotsMachine Redeem` action.
 
-   I prepared required C# `Sub-Action` for this in `Action` called `SlotMachine redeem` in group called `Static points value and name group for testing without Points System`. Select `Sub-Action` inside this group, called `Execute Code (Slot Redeem TESTING without Points System)`, right click it > `Enabled`. There are also two more `Sub-Actions`, with values of ammount of testing points and points name (you can change that if you wish, default testing ammount is `666` with points name `nyah`).
+   I prepared required C# `Sub-Action` for this in `Action` called `SlotMachine redeem` in group called `Static points value and name group for testing without Points System`. Select `Sub-Action` inside this group, called `Execute Code (Slot Redeem TESTING without Points System)`, right click it > `Enabled`. There are also two more `Sub-Actions`, with values of ammount of testing points and points name (you can change that if you wish, default testing ammount is `666` with points name `chimi`).
 
    Now you can test !slotStart and other commands. But you will always set user to have the same amount of points we just defined and it will resets itself on each start of new game. So please, either use one of already made Points Systems or code your own.
    
