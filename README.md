@@ -80,7 +80,7 @@ Video instructions coming soon (I say that a lot). Here is a text version in the
 
      Now we need to make sure, that SB can communicate with Slot Machine. Select tab `Servers/Clients` > `Websocket Server` (Server, not Servers!).
      Check `Auto Start` (to make sure, we do not need to start the server every time we restart SB). And click on `Start Server`.
-     Take note of the `Address`, `Port` and `Endpoint`. These must match with variables in `script.js` located in our example path at `D:\StreamingStuff\SlotMachine\script.js` first three   uncommented lines (uncommented line = no `//` at start of the lines).
+     Take note of the `Address`, `Port` and `Endpoint`. These must match with variables in `script.js` (open this file with Notepad, or other favorite editor) located in our example path at `D:\StreamingStuff\SlotMachine\script.js` first three   uncommented lines (uncommented line = no `//` at start of the lines).
      In SB, default values are: IP - `127.0.0.1`, Port - `8080`, Endpoint - `/`, so these should match with values in `script.js`. If they do not match or you use different values, change them   accordingly in both places.
      *Okay, we enabled commands and made sure SB communicates with our Slot Machine. Now let's make sure, all imported actions are setup correctly and working.*
    
@@ -109,7 +109,7 @@ Video instructions coming soon (I say that a lot). Here is a text version in the
       You have to manually add `System.Linq.dll` & `System.Core.dll`. How? Right click the white space in `References` tab and click on `Add reference from file...`. Into `File name` fill in `System.Linq.dll` and click `Open`. And do same for `System.Core.dll`.
       Try clicking `Compile` now and you should see in `Compiling Log` this message - `Building out needed information... Compiled successfully!`. Click `Save and Compile`.
 
-      4. Last one is hidden inside the `Action` called `SlotMachine redeem` in the group `Static points value and name group for testing without Points System`. Double click it and make sure it compiles as the rest of them. Leave this C# `Sub-Action` disabled (you can tell it is disabled, since it has purple color, not white). Enable it **ONLY IF** you need it for testing, since you do not use any Points System. 
+      4. Last one is hidden inside the `Action` called `SlotMachine redeem` in the group `Static points value and name group for testing without Points System`. Double click it and make sure it compiles as the rest of them. Leave this C# `Sub-Action` disabled (you can tell it is disabled, since it has pink/purple color, not black). Enable it **ONLY IF** you need it for testing, since you do not use any Points System. 
 
    - **Do this only if you rename any of the actions**
 
@@ -132,12 +132,12 @@ Once Slot Machine game starts with first command !slotStart, any other command w
 
 Try typing following commands into twitch/youtube chat for testing:
 
--  !slotStart *points ammount* sets all pieces in action, if all checks are passed (minimum, maximum point ammounts, C# compiles, OBS source and scene names are correct, all arguments are happy, Lucifer smiles, etc..) it shows OBS source with Player Name (whoever started the game) and Credits with same ammount that are after the command !slotStart. Name of the points is by default called `points`, unless you changed it using your Points System of choice (or use Testing argument, described below).
+-  !slotStart *points ammount* sets all pieces in action, if all checks are passed (minimum, maximum point ammounts, C# compiles, OBS source and scene names are correct, all arguments are happy, Lucifer smiles, etc..) it shows OBS source with Player Name (whoever started the game) and Credits with same ammount that are written after the command !slotStart. Name of the points is by default called `points`, unless you changed it using your Points System of choice (or use Testing argument, described below).
 
    *example:* `!slotStart 200` initiated by me, would fill under Player: MarkusoOoO and under Credits: `200 points` (since I did not change default points to something else in my example).
    **Side note: amount of point your are betting must be multiples of 10, eg. 10, 20, 30... 300, 310, 320... 1110, 1120... Reason being, actual spin cost is always divided by 10. If you try to use something like "!slotStart 111" it will not let you through and you will get a response in the chat.
 
--  !slotSpin would start the Slot Machine and spin the reels. Cost of each spin is ALWAYS ammount bet at start divided by 10.
+-  !slotSpin would start the Slot Machine and spin the reels. Cost of each spin is ALWAYS points bet divided by 10.
 
    *example:* `!slotSpin`
 
@@ -148,7 +148,7 @@ Try typing following commands into twitch/youtube chat for testing:
 
 -  !slotTransfer will move your Won points into your Credits (so you can continue spining).
 
-   *example:* before I use the command, I see that under Credits is 0 and under Won is 690. Using `!slotTransfer` shift Won to 0 and Credits to 690, so I can continue spinning using Credits.
+   *example:* before I use the command, I see that under Credits is 0 and under Won is 690. Using `!slotTransfer` shift Won to 0 and Credits to 690, so I can continue spining using Credits.
 
 -  !slotWithdraw ends the game, hiding the source in OBS and summing up the game by adding together Credits and Won and adding them to the points of the player. All information is shown in twitch chat.
 
