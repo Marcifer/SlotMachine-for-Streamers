@@ -132,7 +132,7 @@ Once Slot Machine game starts with first command !slotStart, any other command w
 
 Try typing following commands into twitch/youtube chat for testing:
 
--  !slotStart *points ammount* sets all pieces in action, if all checks are passed (minimum, maximum point ammounts, C# compiles, OBS source and scene names are correct, all arguments are happy, Lucifer smiles, etc..) it shows OBS source with Player Name (whoever started the game) and Credits with same ammount that are written after the command !slotStart. Name of the points is by default called `points`, unless you changed it using your Points System of choice (or use Testing argument, described below).
+-  !slotStart *points amount* sets all pieces in action, if all checks are passed (minimum, maximum point amounts, C# compiles, OBS source and scene names are correct, all arguments are happy, Lucifer smiles, etc..) it shows OBS source with Player Name (whoever started the game) and Credits with same amount that are written after the command !slotStart. Name of the points is by default called `points`, unless you changed it using your Points System of choice (or use Testing argument, described below).
 
    *example:* `!slotStart 200` initiated by me, would fill under Player: MarkusoOoO and under Credits: `200 points` (since I did not change default points to something else in my example).
    **Side note: amount of point your are betting must be multiples of 10, eg. 10, 20, 30... 300, 310, 320... 1110, 1120... Reason being, actual spin cost is always divided by 10. If you try to use something like "!slotStart 111" it will not let you through and you will get a response in the chat.
@@ -172,7 +172,7 @@ Here is list of possible issues that you could encounter:
 
    However, if you just want to make sure everything works and test the Slot Machine, you can, as a temporary workaround, set fix value of points to whoever calls the `!slotStart` command and triggers `SlotsMachine Redeem` action.
 
-   I prepared required C# `Sub-Action` for this in `Action` called `SlotMachine redeem` in group called `Static points value and name group for testing without Points System`. Select `Sub-Action` inside this group, called `Execute Code (Slot Redeem TESTING without Points System)`, right click it > `Enabled`. There are also two more `Sub-Actions`, with values of ammount of testing points and points name (you can change that if you wish, default testing ammount is `666` with points name `chimi`).
+   I prepared required C# `Sub-Action` for this in `Action` called `SlotMachine redeem` in group called `Static points value and name group for testing without Points System`. Select `Sub-Action` inside this group, called `Execute Code (Slot Redeem TESTING without Points System)`, right click it > `Enabled`. There are also two more `Sub-Actions`, with values of amount of testing points and points name (you can change that if you wish, default testing amount is `666` with points name `chimi`).
 
    Now you can test !slotStart and other commands. But you will always set user to have the same amount of points we just defined and it will resets itself on each start of new game. So please, either use one of already made Points Systems or code your own.
    
