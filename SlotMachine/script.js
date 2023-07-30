@@ -236,6 +236,7 @@ Vue.component('slot-machine', {
       spend: 100,
       credits: 100,
       spinCost: 10,
+	  streamingPlatform: null,
       obsSceneName: null,
       obsSourceName: null,
       spinActionName: null,
@@ -292,6 +293,7 @@ Vue.component('slot-machine', {
         const parentName = jsonData.data.parentName;
         const startActionName = jsonData.data.arguments.slotsStartActionName;
         if (parentName == startActionName) {
+		  this.streamingPlatform = jsonData.data.arguments.commandSource;
           this.spend = parseInt(jsonData.data.arguments.slotsBet);
           this.slotsPlayer = jsonData.data.arguments.user;
           this.credits = this.spend;
@@ -492,7 +494,8 @@ Vue.component('slot-machine', {
             slotsSpend: this.spend,
             slotsPlayer: this.slotsPlayer,
             slotsSceneName: this.obsSceneName,
-            slotsSourceName: this.obsSourceName
+            slotsSourceName: this.obsSourceName,
+			commandSource: this.streamingPlatform
         }
       }));
     }
