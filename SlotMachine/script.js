@@ -1,6 +1,7 @@
 // Modified with demon love by MarkusoOoO
 // Original Pen by https://codepen.io/rattatat at https://codepen.io/rattatat/pen/mXqJEq
 // Streamer bot connection variables
+
 const ADDRESS = "127.0.0.1"; // IP of SB instance
 const PORT = "8080"; // port of SB instance
 const ENDPOINT = "/"; // endpoint of SB instance
@@ -533,42 +534,42 @@ Vue.component('slot-machine', {
     <div class="Legend">
       <div class="Legend-item">
         <div class="Legend-itemTitle">{{ this.valueItemOne }} {{ currency }}</div>
-        <img class="Legend-itemImage" src="./images/item1.png" />
-        <img class="Legend-itemImage" src="./images/item1.png" />
-        <img class="Legend-itemImage" src="./images/item1.png" />
+        <img class="Legend-itemImage" v-bind:src="itemOneImagePath" />
+        <img class="Legend-itemImage" v-bind:src="itemOneImagePath" />
+        <img class="Legend-itemImage" v-bind:src="itemOneImagePath" />
       </div>
       <div class="Legend-item">
         <div class="Legend-itemTitle">{{ this.valueItemTwo }} {{ currency }}</div>
-        <img class="Legend-itemImage" src="./images/item2.png" />
-        <img class="Legend-itemImage" src="./images/item2.png" />
-        <img class="Legend-itemImage" src="./images/item2.png" />
+        <img class="Legend-itemImage" v-bind:src="itemTwoImagePath" />
+        <img class="Legend-itemImage" v-bind:src="itemTwoImagePath" />
+        <img class="Legend-itemImage" v-bind:src="itemTwoImagePath" />
       </div>
       <div class="Legend-item">
         <div class="Legend-itemTitle">{{ this.valueItemThree }} {{ currency }}</div>
-        <img class="Legend-itemImage" src="./images/item3.png" />
-        <img class="Legend-itemImage" src="./images/item3.png" />
-        <img class="Legend-itemImage" src="./images/item3.png" />
+        <img class="Legend-itemImage" v-bind:src="itemThreeImagePath" />
+        <img class="Legend-itemImage" v-bind:src="itemThreeImagePath" />
+        <img class="Legend-itemImage" v-bind:src="itemThreeImagePath" />
       </div>
       <div class="Legend-item">
         <div class="Legend-itemTitle">{{ this.valueItemFour }} {{ currency }}</div>
-        <img class="Legend-itemImage" src="./images/item4.png" />
-        <img class="Legend-itemImage" src="./images/item4.png" />
-        <img class="Legend-itemImage" src="./images/item4.png" />
+        <img class="Legend-itemImage" v-bind:src="itemFourImagePath" />
+        <img class="Legend-itemImage" v-bind:src="itemFourImagePath" />
+        <img class="Legend-itemImage" v-bind:src="itemFourImagePath" />
       </div>
       <div class="Legend-item">
         <div class="Legend-itemTitle">{{ this.valueOneJackpot }} {{ currency }}</div>
-        <img class="Legend-itemImage" src="./images/item5.png" />
+        <img class="Legend-itemImage" v-bind:src="itemFiveImagePath" />
       </div>
       <div class="Legend-item">
         <div class="Legend-itemTitle">{{ this.valueTwoJackpot }} {{ currency }}</div>
-        <img class="Legend-itemImage" src="./images/item5.png" />
-        <img class="Legend-itemImage" src="./images/item5.png" />
+        <img class="Legend-itemImage" v-bind:src="itemFiveImagePath" />
+        <img class="Legend-itemImage" v-bind:src="itemFiveImagePath" />
       </div>      
       <div class="Legend-item">
         <div class="Legend-itemTitle">{{ this.valueItemFive }} {{ currency }}</div>
-        <img class="Legend-itemImage" src="./images/item5.png" />
-        <img class="Legend-itemImage" src="./images/item5.png" />
-        <img class="Legend-itemImage" src="./images/item5.png" />
+        <img class="Legend-itemImage" v-bind:src="itemFiveImagePath" />
+        <img class="Legend-itemImage" v-bind:src="itemFiveImagePath" />
+        <img class="Legend-itemImage" v-bind:src="itemFiveImagePath" />
       </div>
     </div>
     <div class="Legend-tip">Add coins to add credit. Press space to Play. Click reel or press 1, 2 or 3 to lock. Brought to you by Timo & Lex Hofmeijer</div>
