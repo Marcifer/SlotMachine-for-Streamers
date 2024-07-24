@@ -223,4 +223,4 @@ Video guide will be provided (soon, cough cough).
 
 # Do you like what I do?
 
-No, I am not gonna sell-out. But I appreciate all the support of what I do at my twitch channel > https://www.twitch.tv/markusoooo (interactive stream with demon lord himself.. every viewer, that actually interacts on stream, is very welcome).
+Well, good for you! You can even say that to me at my twitch channel > https://www.twitch.tv/markusoooo.
